@@ -1,0 +1,59 @@
+---
+title: "Configuration de DKIM dans Cpanel"
+description: "Guide étape par étape pour configurer DomainKeys Identified Mail (DKIM) dans Cpanel afin d'améliorer la sécurité des emails."
+---
+# Configuration de DKIM dans Cpanel 
+
+## Introduction
+
+DomainKeys Identified Mail (DKIM) est une norme de sécurité des emails conçue pour garantir que les messages ne sont pas altérés pendant leur transit entre les serveurs d'envoi et de réception. La mise en œuvre de DKIM dans Cpanel peut améliorer de manière significative la sécurité et la délivrabilité de vos emails. Ce guide fournit des instructions détaillées sur la configuration de DKIM dans Cpanel.
+
+## <span id="understanding-dkim">Comprendre DKIM</span>
+
+DKIM ajoute une signature numérique aux en-têtes d'un message email. Cette signature peut être validée contre une clé cryptographique publique dans les enregistrements DNS de l'organisation. Voici pourquoi c'est important :
+
+- **Authenticité** : Valide que le message provient de l'expéditeur indiqué et n'est pas falsifié.
+- **Intégrité** : Assure que le contenu de l'email n'a pas été altéré pendant le transit.
+- **Réputation** : Améliore la délivrabilité car les emails signés DKIM sont plus susceptibles d'être fiables pour les serveurs de messagerie.
+
+## <span id="enabling-dkim">Activer DKIM dans Cpanel</span>
+
+Suivez ces étapes pour activer DKIM dans Cpanel :
+
+1. **Accéder à la Section Email** : Connectez-vous à votre compte Cpanel et naviguez jusqu'à la section 'Email'.
+2. **Trouver 'Authentification'** : Dans la section Email, localisez et cliquez sur l'option 'Authentification'.
+3. **Activer DKIM** : Dans le menu Authentification, trouvez l'option DKIM et cliquez sur 'Activer' si ce n'est pas déjà fait.
+
+## <span id="configuring-records">Configurer les Enregistrements DKIM</span>
+
+Après avoir activé DKIM, vous devez ajouter l'enregistrement DKIM généré aux paramètres DNS de votre domaine :
+
+1. **Copier l'Enregistrement DKIM** : Cpanel affichera un enregistrement DKIM. Copiez cet enregistrement en entier.
+2. **Accéder aux Paramètres DNS** : Allez dans les paramètres DNS de votre domaine, qui peuvent se trouver dans Cpanel ou chez votre registraire de domaine.
+3. **Ajouter l'Enregistrement DKIM** : Créez un nouvel enregistrement TXT et collez-y l'enregistrement DKIM.
+
+## <span id="testing-setup">Tester la Configuration DKIM</span>
+
+Pour vous assurer que DKIM fonctionne correctement :
+
+1. **Envoyer un Email de Test** : Envoyez un email depuis votre domaine vers un compte email personnel. Nous vous suggérons d'utiliser <a href="https://www.mail-tester.com" rel="noopener noreferrer nofollow" target="_blank">**Mail Tester**</a>
+
+2. **Inspecter les En-têtes des Emails** : Vérifiez les en-têtes de l'email reçu pour une signature DKIM.
+3. **Utiliser des Validateurs DKIM** : Utilisez des validateurs DKIM en ligne en envoyant un email à leur adresse de test fournie.
+
+## <span id="troubleshooting">Dépannage des Problèmes Courants</span>
+
+- **DKIM Non Validé** : Assurez-vous que l'enregistrement DKIM est correctement saisi dans les paramètres DNS sans faute de frappe.
+- **Temps de Propagation de l'Enregistrement** : Les modifications DNS peuvent prendre du temps pour se propager. Attendez quelques heures et testez à nouveau.
+
+## <span id="faqs">FAQ</span>
+
+### Que faire si mon fournisseur DNS limite la taille des enregistrements TXT ?
+Certains fournisseurs DNS limitent la taille des enregistrements TXT. Si votre enregistrement DKIM est trop long, vous devrez peut-être le diviser en plusieurs enregistrements.
+
+### Puis-je avoir plusieurs enregistrements DKIM ?
+Oui, si vous envoyez des emails depuis plusieurs systèmes, vous pourriez avoir plusieurs enregistrements DKIM.
+
+---
+
+Cette documentation fournit un guide fondamental pour configurer DKIM dans Cpanel, abordant divers aspects allant de l'activation de la fonctionnalité au dépannage des problèmes courants. Assurez-vous toujours que vos paramètres DNS de Cpanel et de domaine sont correctement configurés pour maintenir la sécurité et l'intégrité des emails.

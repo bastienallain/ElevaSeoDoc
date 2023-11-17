@@ -10,7 +10,7 @@ const config: DocsThemeConfig = {
   feedback: { content: null },
   editLink: { text: null },
   i18n: [
-    { locale: "default", text: "English" },
+    { locale: "en", text: "English" },
     { locale: "fr", text: "French" },
   ],
 };

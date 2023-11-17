@@ -1,58 +1,58 @@
 {
   "index": {
     "title": "Introduction",
-    "href": "/mail"
+    "href": "/mail/cpanel"
   },
   "mail": {
-    "title": "Gestion des Emails",
+    "title": "Email Management",
     "type": "menu",
     "items": {
       "ssl": {
-        "title": "SSL pour les Emails",
+        "title": "SSL for Emails",
         "href": "/mail/ssl"
       },
       "dmarc": {
-        "title": "Politique DMARC",
+        "title": "DMARC Policy",
         "href": "/mail/dmarc"
       },
       "dkim": {
-        "title": "Configuration DKIM",
+        "title": "DKIM Configuration",
         "href": "/mail/dkim"
       },
       "email-setup": {
-        "title": "Configuration et Mise en Place des Emails",
+        "title": "Email Setup and Configuration",
         "href": "/mail/email-setup"
       },
       "email-troubleshooting": {
-        "title": "Dépannage des Emails",
+        "title": "Email Troubleshooting",
         "href": "/mail/email-troubleshooting"
       }
     }
   },
   "seo": {
-    "title": "Stratégies SEO",
+    "title": "SEO Strategies",
     "type": "menu",
     "items": {
       "introduction-seo": {
-        "title": "Introduction au SEO",
+        "title": "Introduction to SEO",
         "href": "/seo/introduction-seo"
       },
       "seo-techniques": {
-        "title": "Techniques SEO",
+        "title": "SEO Techniques",
         "href": "/seo/seo-techniques"
       },
       "seo-tools": {
-        "title": "Outils SEO",
+        "title": "SEO Tools",
         "href": "/seo/seo-tools"
       },
       "seo-analytics": {
-        "title": "Analytique SEO",
+        "title": "SEO Analytics",
         "href": "/seo/seo-analytics"
       }
     }
   },
   "about": {
-    "title": "À propos",
+    "title": "About",
     "href": "https://elevaseo.com/about",
     "newWindow": true
   },
