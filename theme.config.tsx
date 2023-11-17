@@ -1,18 +1,18 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from "react";
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
-  project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
-  },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
-  footer: {
-    text: 'Nextra Docs Template',
-  },
-}
+  logo: <span>Documentation ElevaSeo</span>,
 
-export default config
+  footer: {
+    text: "ElevaSeo & ElevaSea Docs",
+  },
+  feedback: { content: null },
+  editLink: { text: null },
+  i18n: [
+    { locale: "default", text: "English" },
+    { locale: "fr", text: "French" },
+  ],
+};
+
+export default config;

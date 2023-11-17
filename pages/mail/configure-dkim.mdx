@@ -1,0 +1,61 @@
+---
+title: "Configuring DKIM in Cpanel"
+description: "Step-by-step guide to setting up DomainKeys Identified Mail (DKIM) in Cpanel for enhanced email security."
+---
+# Configuring DKIM in Cpanel
+
+## Introduction
+
+DomainKeys Identified Mail (DKIM) is an email security standard designed to ensure that messages are not altered in transit between the sending and receiving servers. Implementing DKIM in Cpanel can significantly improve the security and deliverability of your emails. This guide provides comprehensive instructions on configuring DKIM in Cpanel.
+
+
+
+## <span id="understanding-dkim">Understanding DKIM</span>
+
+DKIM adds a digital signature to the headers of an email message. This signature can be validated against a public cryptographic key in the organization's DNS records. Here’s why it’s important:
+
+- **Authenticity**: Validates that the message comes from the stated sender and is not forged.
+- **Integrity**: Ensures that the content of the email hasn't been tampered with during transit.
+- **Reputation**: Improves deliverability as DKIM-signed emails are more likely to be trusted by email servers.
+
+## <span id="enabling-dkim">Enabling DKIM in Cpanel</span>
+
+Follow these steps to enable DKIM in Cpanel:
+
+1. **Access the Email Section**: Log in to your Cpanel account and navigate to the 'Email' section.
+2. **Find 'Authentication'**: In the Email section, locate and click on the 'Authentication' option.
+3. **Enable DKIM**: In the Authentication menu, find the DKIM option and click on 'Enable' if it's not already active.
+
+## <span id="configuring-records">Configuring DKIM Records</span>
+
+After enabling DKIM, you need to add the generated DKIM record to your domain's DNS settings:
+
+1. **Copy DKIM Record**: Cpanel will display a DKIM record. Copy this entire record.
+2. **Access DNS Settings**: Go to your domain's DNS settings, which might be in Cpanel or with your domain registrar.
+3. **Add DKIM Record**: Create a new TXT record and paste the DKIM record into the value field.
+
+## <span id="testing-setup">Testing DKIM Setup</span>
+
+To ensure DKIM is working correctly:
+
+1. **Send a Test Email**: Send an email from your domain to a personal email account. We suggest to use <a href="https://www.mail-tester.com" rel="noopener noreferrer nofollow" target="_blank">**Mail Tester**</a>
+
+2. **Inspect Email Headers**: Check the headers of the received email for a DKIM signature.
+3. **Use DKIM Validators**: Utilize online DKIM validators by sending an email to their provided test address.
+
+## <span id="troubleshooting">Troubleshooting Common Issues</span>
+
+- **DKIM Not Validating**: Ensure the DKIM record is correctly entered in DNS settings without any typos.
+- **Record Propagation Time**: DNS changes can take time to propagate. Wait a few hours and test again.
+
+## <span id="faqs">FAQs</span>
+
+### What if my DNS provider limits TXT record size?
+Some DNS providers limit the size of TXT records. If your DKIM record is too long, you might need to split it into multiple records.
+
+### Can I have multiple DKIM records?
+Yes, if you send emails from multiple systems, you might have multiple DKIM records.
+
+---
+
+This documentation provides a fundamental guide to configuring DKIM in Cpanel, addressing various aspects from enabling the feature to troubleshooting common issues. Always ensure your Cpanel and domain DNS settings are correctly configured to maintain email security and integrity.
